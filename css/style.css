@@ -26,3 +26,51 @@ main {
 .offcanvas-top{
     height: fit-content;
 }
+
+.album{
+    display: flex;
+    justify-content: space-around;
+}
+
+.p-content{
+    max-width: 70%;
+}
+
+.p-title{
+    font-weight: bold;
+}
+
+.p-desc{
+    color: hsl(210, 11%, 55%);
+    font-style: italic;
+}
+
+
+.list-group{
+    min-width: 80%;
+}
+
+.elemento-peli{
+    color: beige;
+    background-color: #212529;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.offcanvas-bot{
+    padding: 1rem 1rem;
+    color: hsl(211, 11%, 35%);
+    font-style: italic;
+    border-top: hsl(211, 11%, 55%) 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+li{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 1rem 0 0;
+}
