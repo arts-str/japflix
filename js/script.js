@@ -26,19 +26,19 @@ buscar.addEventListener('click', () =>{
         allMovies.forEach((movie, i) => { //Por cada película del array de todas las películas 
             if(busqueda === "*"){ //Si la busqueda es * 
                 coincidencias.push([movie, i]); //Agrega todas las peliculas y sus posiciones en el array
-                return;
+                return; //Salir
             }         
             if (movie.title.toLowerCase().includes(busqueda) || movie.overview.toLowerCase().includes(busqueda) || movie.tagline.toLowerCase().includes(busqueda)) { //Si la busqueda esta en el titulo, overview o tagline
                 coincidencias.push([movie, i]); //Agregar pelicula y posicion en el array a la lista de coincidencias
-                return;
+                return; //Salir
             }
             for (const genre of movie.genres) { //Para cada genero dentro del listado de generos
                 if (genre.name.toLowerCase().includes(busqueda)) { //Si el nombre coincide con la busqueda
                     coincidencias.push([movie, i]); //Agregar pelicula y posicion en el array a la lista de coincidencias
-                    return;
+                    return; //Salir
                 }
             }
-        });
+        }); //Si no se sale luego de agregar la pelicula, una búsqueda como "a" puede agregar la misma pelicula varias veces a la lista de coincidencias
     }else{
         alert("El campo está vacío!"); //Si la busqueda esta vacia, alertar al usuario
     }
